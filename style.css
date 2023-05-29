@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400&family=Roboto:wght@300;400;700&family=Rubik&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+}
+
+.cards.div1 {
+  background-image: url(./assets/corinne-kutz-tMI2_-r5Nfo-unsplash.jpg);
+}
+
+.cards.div2 {
+  background-image: url(./assets/damian-zaleski-RYyr-k3Ysqg-unsplash.jpg);
+}
+
+.cards.div3 {
+  background-image: url(./assets/merakist-CNbRsQj8mHQ-unsplash.jpg);
+}
+
+.cards.div4 {
+  background-image: url(./assets/philipp-katzenberger-iIJrUoeRoCQ-unsplash.jpg);
+}
+
+.cards.div5 {
+  background-image: url(./assets/sergey-zolkin-_UeY8aTI6d0-unsplash.jpg);
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.cards {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 80vh;
+  border-radius: 5rem;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 1rem;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+h3 {
+  position: absolute;
+  left: 3rem;
+  bottom: 0.6rem;
+  opacity: 0;
+  font-size: 2rem;
+}
+
+.active {
+  flex: 5;
+}
+
+.active h3 {
+  opacity: 1;
+}
+
+@media (max-width: 30rem) {
+  .container {
+    width: 100vw;
+  }
+  .cards.div4,
+  .cards.div5 {
+    display: none;
+  }
+}
